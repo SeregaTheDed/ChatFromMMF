@@ -9,7 +9,8 @@ namespace ChatFromMMF
 {
     public static class ManageMemoryMappedFile
     {
-        private static MemoryMappedFile mmf = MemoryMappedFile.CreateOrOpen("MyChatLaba2", 1000, MemoryMappedFileAccess.ReadWrite);
+        private const int MaxCapacity = 1000;
+        private static MemoryMappedFile mmf = MemoryMappedFile.CreateOrOpen("MyChatLaba2", MaxCapacity, MemoryMappedFileAccess.ReadWrite);
         static ManageMemoryMappedFile()
         {
             if (Capacity == 0) 
